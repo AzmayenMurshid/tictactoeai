@@ -132,7 +132,7 @@ function bestSpot(){
 
 function checkTie(){
   if(emptySquares().length == 0) {
-    declareWinner("Technical Win!")
+    declareWinner("Tactical Win!")
     for (let i = 0; i < cells.length; i++){
       cells.removeEventListener('click', turnClick, false);
     }
