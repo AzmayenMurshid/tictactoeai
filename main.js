@@ -45,15 +45,16 @@ document.querySelector('#app').innerHTML = `
     </table>
     <div class="endgame" id="endgame">
       <div class="text"></div>
+      <p id="judgetxt" class="judgetxt"></p>
     </div>
     <div class="btnContainer" id="btnContainer"></div>
     <footer id="footer" class="footer">Built by Azmayen Murshid</footer>
   </div>
 `
-const replayBtn = document.createElement('button');
-replayBtn.textContent = 'Replay';
-replayBtn.addEventListener('click', startGame);
-document.getElementById('btnContainer').appendChild(replayBtn)
+const restartBtn = document.createElement('button');
+restartBtn.textContent = 'Replay';
+restartBtn.addEventListener('click', startGame);
+document.getElementById('btnContainer').appendChild(restartBtn)
 
 const minimaxBtn = document.createElement('button')
 minimaxBtn.textContent = 'HARD'
@@ -64,11 +65,10 @@ minimaxBtn.addEventListener('click', () => {
 })
 document.getElementById('btnContainer').appendChild(minimaxBtn)
 
-const redoBtn = document.createElement('button');
-redoBtn.textContent = 'Redo';
-redoBtn.addEventListener('click', startGame);
-document.getElementById('endgame').appendChild(redoBtn);
-redoBtn.innerHTML = `<img src = "./replayIcon.png" alt="Replay" />`
+const replayBtn = document.createElement('button');
+replayBtn.textContent = 'Play Again';
+replayBtn.addEventListener('click', startGame);
+document.getElementById('endgame').appendChild(replayBtn);
 
 const cells = document.querySelectorAll('.cell');
 startGame()
@@ -133,8 +133,8 @@ function bestSpot(){
 function checkTie(){
   if(emptySquares().length == 0) {
     declareWinner("Tie Game!")
+    document.getElementById("judgetxt").innerHTML=`<p> Player's Judgement required </p>`
     for (let i = 0; i < cells.length; i++){
-      cells[i].style.backgroundColor = "none";
       cells.removeEventListener('click', turnClick, false);
     }
     return true;
