@@ -1,20 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Share+Tech&display=swap');
+
+body{
+	background-color: #16262a;
+}
+
 td {
-	border:  2px solid #333;
-	height:  100px;
-	width:  100px;
+	padding: 20px;
+	border: 4px solid #16262a;
+	height: 80px;
+	width: 80px;
 	text-align:  center;
 	vertical-align:  middle;
-	font-family:  "Comic Sans MS", cursive, sans-serif;
+	font-family: "Share Tech", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 	font-size:  70px;
+	background-color: #43666b;
+	border-radius: 15%;
 	cursor: pointer;
 }
 
+.cell{
+	margin-left: 20px;
+}
 table {
 	border-collapse: collapse;
 	position: absolute;
 	left: 50%;
-	margin-left: -155px;
-	top: 50px;
+	margin-left: -190px;
+	top: 35%;
+	border-color: white;
 }
 
 table tr:first-child td {
@@ -37,7 +53,7 @@ table tr td:last-child {
   display: none;
   width: 200px;
   top: 120px;
-  background-color: rgba(205,133,63, 0.8);
+  background-color: rgba(47, 43, 39, 0.8);
   position: absolute;
   left: 50%;
   margin-left: -100px;
@@ -47,4 +63,62 @@ table tr td:last-child {
   border-radius: 5px;
   color: white;
   font-size: 2em;
+  margin-top: 250px;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white
+}
+
+.endgame button{
+	border: none;
+}
+
+img{
+	height: 50px;
+	width: 50px;
+}
+
+h1{
+	text-align: center;
+	margin-bottom: 100px;
+	margin-left: -20px;
+	font-family: "Anton SC", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: white;
+	font-size: 50px;
+}
+
+.btnContainer{
+	position: absolute;
+	left: 50%;
+	margin-left: -155px;
+}
+
+button{
+	width: 100px;
+	height: 50px;
+	border: solid 2px;
+	background: none;
+	border-radius: 50px;
+	cursor: pointer;
+	margin: 20px;
+	color: white;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 99%;
+	height: 60px;
+	color: white;
+	text-align: center;
+	line-height: 60px;
+	font-family: "Anton SC", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+	font-size: 20px;
+
+	
 }

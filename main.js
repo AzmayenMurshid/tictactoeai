@@ -6,7 +6,7 @@ const AI = 'X';
 const winCombos = [
 	[0, 1, 2], [3, 4, 5], [6, 7, 8],
 	[0, 3, 6], [1, 4, 7], [2, 5, 8],
-  [0, 4, 8], [6, 4, 2]
+  [0, 4, 8], [6, 4, 2], 
 ]
 
 var MINIMAX = false
@@ -25,6 +25,7 @@ document.querySelector('#app').innerHTML = `
   <div>
     <h1> Tic Tac Toe </h1>
     <table>
+    <tbody>
 		<tr>
 			<td class="cell" id="0"></td>
 			<td class="cell" id="1"></td>
@@ -40,11 +41,13 @@ document.querySelector('#app').innerHTML = `
 			<td class="cell" id="7"></td>
 			<td class="cell" id="8"></td>
 		</tr>
+    </tbody>
     </table>
     <div class="endgame" id="endgame">
       <div class="text"></div>
     </div>
-    <div id="btnContainer"></div>
+    <div class="btnContainer" id="btnContainer"></div>
+    <footer id="footer" class="footer">Built by Azmayen Murshid</footer>
   </div>
 `
 const replayBtn = document.createElement('button');
@@ -65,7 +68,7 @@ const redoBtn = document.createElement('button');
 redoBtn.textContent = 'Redo';
 redoBtn.addEventListener('click', startGame);
 document.getElementById('endgame').appendChild(redoBtn);
-redoBtn.innerHTML = `<img src = "replayIcon.svg" />`
+redoBtn.innerHTML = `<img src = "./replayIcon.png" alt="Replay" />`
 
 const cells = document.querySelectorAll('.cell');
 startGame()
@@ -101,7 +104,7 @@ function checkWin(board, player){
 function gameOver(gameWon){
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
-    gameWon.player == PLAYER ? "green" : "red";
+    gameWon.player == PLAYER ? "#5a9964" : "#995a5b"; // change colors
   }
   for(var i = 0; i < cells.length; i++){
     cells[i].removeEventListener('click', turnClick, false);
