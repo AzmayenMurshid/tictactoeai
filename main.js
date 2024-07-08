@@ -52,7 +52,7 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 const restartBtn = document.createElement('button');
-restartBtn.textContent = 'Replay';
+restartBtn.textContent = 'Restart';
 restartBtn.addEventListener('click', startGame);
 document.getElementById('btnContainer').appendChild(restartBtn)
 
