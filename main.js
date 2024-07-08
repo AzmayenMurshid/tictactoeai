@@ -133,7 +133,7 @@ function bestSpot(){
 function checkTie(){
   if(emptySquares().length == 0) {
     declareWinner("Tie Game!")
-    document.getElementById("judgetxt").innerHTML=`<p> Player's Judgement required </p>`
+    document.getElementById("judgetxt").innerHTML=`<p> Judge required </p>`
     for (let i = 0; i < cells.length; i++){
       cells.removeEventListener('click', turnClick, false);
     }
