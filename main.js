@@ -6,7 +6,7 @@ const AI = 'X';
 const winCombos = [
 	[0, 1, 2], [3, 4, 5], [6, 7, 8],
 	[0, 3, 6], [1, 4, 7], [2, 5, 8],
-  [0, 4, 8], [6, 4, 2], 
+  [0, 4, 8], [6, 4, 2]
 ]
 
 var MINIMAX = false
@@ -57,11 +57,10 @@ restartBtn.addEventListener('click', startGame);
 document.getElementById('btnContainer').appendChild(restartBtn)
 
 const minimaxBtn = document.createElement('button')
-minimaxBtn.textContent = 'HARD'
+minimaxBtn.textContent = 'MODE: HARD'
 minimaxBtn.addEventListener('click', () => {
-  minimaxBtn.textContent = MINIMAX ? 'HARD' : 'EASY'
+  minimaxBtn.textContent = MINIMAX ? "MODE: HARD" : "MODE: EASY"
   MINIMAX = !MINIMAX;
-  console.log(MINIMAX)
 })
 document.getElementById('btnContainer').appendChild(minimaxBtn)
 
